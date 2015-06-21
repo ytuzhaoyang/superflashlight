@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.hardware.Camera;
 import android.hardware.Camera.Parameters;
 import android.os.Bundle;
+import android.view.Window;
 import android.widget.ImageView;
 
 public class BaseActivity extends Activity {
@@ -15,6 +16,7 @@ public class BaseActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_main);
 
 		mImageViewFlashlight = (ImageView) findViewById(R.id.imageview_flashlight);
